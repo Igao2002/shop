@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B20DCCN209</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/slide.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <div class="header">
+            <div class="flex-header">
+                <div>
+                    <a href="#" class="logo">
+                        <img src="assets/img/logo.jpg" class="logo-shop" alt="logo">
+                    </a>
+                </div>
+                <div>
+                    <ul class="navbar">
+                        <!-- Home -->
+                        <li class="tab-item active tab-home">
+                            <a href="#">HOME</a>
+                        </li>
+                        <!-- Product -->
+                        <li class="tab-item">
+                            <a href="#allPrd">SẢN PHẨM</a>
+                        </li>
+                        <!-- Giới thiệu -->
+                        <li class="tab-item">
+                            <a href="about.html">GIỚI THIỆU</a>
+                        </li>
+                        <!-- Gior hàng -->
+                        <li class="tab-item">
+                            <div class="header__cart">
+                                <div class="header__cart-wrap">
+                                    <div class="header__cart-icon">
+                                        <i class="fas fa-shopping-cart icon-cart">
+                                            <span class="header__cart-notice"></span>
+                                        </i>
+                                    </div>
+                                    <div class="header__cart-list">
+                                        <div class="serieel"></div>
+                                        <div class="no-cart">
+                                            <img src="./assets/img/no_cart.png" alt="" class="header__cart-no-cart-img">
+                                            <p class="header__cart-list-no-cart-msg">
+                                                Chưa có sản phẩm
+                                            </p>
+                                        </div>
+                                        <div class="list-cart-item">
+                                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                            <ul class="header__cart-list-item">
+                                            </ul>
+                                            <button class="list-cart-item-button">Xem giỏ hàng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- User -->
+                        <!-- <li class="tab-item user" onclick="checkUser()"> -->
+                        <li class="tab-item user">
+                            <a href="user.html">
+                                <img src="" id="avatarUser" alt="">
+                                <span id="usernameDisplay"></span>
+                            </a>
+                        </li>
+                        <a class="btn-log login" href="login.html">Đăng nhập</a>
+                        <a class="btn-log logout" onclick="logout()">Đăng xuất</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- slide -->
+            <div class="slide">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./img_slider/slide1.png" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./img_slider/slide2.png" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./img_slider/slide3.png" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./img_slider/slide4.png" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./img_slider/slide5.png" style="width:100%">
+                    </div>
+                </div>
+                <div class="slide-bottom">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+
+            <div class="product">
+                <!-- sản phẩm bán chạy nhất -->
+                <div class="listProduct1">
+                    <div class="bsl-header">
+                        <span class="act1 active1">SP NỔI BẬT</span>
+                        <span class="act2">BÁN CHẠY NHẤT</span>
+                    </div>
+                    <div class="goodReview" id="gr"></div>
+                    <div class="bestSeller hide" id="bs"></div>
+                </div>
+                <!-- CONTENT1 -->
+                <div class="content1">
+                    <div class="large-title">
+                        Mua sắm dễ dàng!
+                    </div>
+                    <div class="step">
+                        <div data-aos="fade-right" data-aos-duration="1000" class="step1 circle">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <div class="title">
+                                <span class="cnt">1</span>
+                                <div> Tìm sản phẩm</div><br>
+                            </div>
+                            <p>Sản phẩm được phân loại chi tiết theo danh mục trên Menu hoặc sắp xếp thành từng chủ đề
+                                trong trang chủ.</p>
+                        </div>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <div data-aos="fade-right" data-aos-duration="1000" class="step2 circle">
+                            <i class="fa-regular fa-rectangle-list"></i>
+                            <div class="title">
+                                <div class="cnt">2</div>
+                                <span> Chọn mua hàng</span><br>
+                            </div>
+                            <p>Sản phẩm thường có kích thước, màu sắc phù hợp với phong cách và sở thích của đại đa số
+                                khách hàng.
+                            </p>
+                        </div>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="step3 circle">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <div class="title">
+                                <div class="cnt">3</div>
+                                <span>Thanh toán</span><br>
+                            </div>
+                            <p>ĐnH hiện tại chỉ chấp nhận hình thức thanh toán khi nhận hàng (chúng tôi sẽ cố gắng cải
+                                thiện trong tương lai).</p>
+                        </div>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="step4 circle">
+                            <button>
+                                <a href="#allPrd">
+                                    BẮT ĐẦU NGAY
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm mới -->
+                <div class="new-product">
+                    <div class="xxlare">Sản phẩm mới</div>
+                    <div class="text-16">Chúng tôi luôn tìm tòi, nghiên cứu để mang đến những sản phẩm mới với thiết kế,
+                        chất liệu mới, bắt kịp xu hướng thời đại.
+                    </div>
+                    <div class="new" id="np">
+                    </div>
+                </div>
+                <!-- CONTENT2 -->
+                <div class="content2">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="column4">
+                        <i class="fa-sharp fa-solid fa-plane-departure"></i>
+                        <div class="desc">
+                            <div class="titleDesc">
+                                GỌI ĐIỆN ĐẶT HÀNG
+                            </div>
+                            <div class="textDesc">
+                                Tất cả sản phẩm đều có thể đặt hàng qua điện thoại. Chúng tôi sẽ xử lý đơn hàng giúp
+                                bạn. Hãy gọi 0333333333.
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-duration="1000" class="column4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div class="desc">
+                            <div class="titleDesc">
+                                FREESHIP
+                            </div>
+                            <div class="textDesc">
+                                Hiểu được tâm lý lo ngại về phí vận chuyển nên chúng tôi quyết định miễn phí vận chuyển
+                                cho toàn bộ đơn hàng.
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" class="column4">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                        <div class="desc">
+                            <div class="titleDesc">
+                                ĐỔI TRẢ DỄ DÀNG
+                            </div>
+                            <div class="textDesc">
+                                Tất cả sản phẩm được đổi trả dễ dàng trong vòng 7 ngày bất kể lý do và miễn phí với hàng
+                                có sẵn.
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" class="column4">
+                        <i class="fa-solid fa-medal"></i>
+                        <div class="desc">
+                            <div class="titleDesc">
+                                BẢO HÀNH CHU ĐÁO
+                            </div>
+                            <div class="textDesc">
+                                Thời gian bảo hành của từng sản phẩm được quy định chi tiết trong phần mô tả và được
+                                thực hiện chu đáo, thuận lợi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Danh muc san pham -->
+                <div class="all-product" id="allPrd">
+                    <div data-aos="fade-down-right" data-aos-duration="1000">DANH MỤC SẢN PHẨM</div>
+                    <ul data-aos="fade-left" data-aos-duration="1000" class="menu">
+                        <li class="tab-menu active2">TẤT CẢ SẢN PHẨM</li>
+                        <li class="tab-menu ">PHÒNG KHÁCH</li>
+                        <li class="tab-menu ">PHÒNG NGỦ</li>
+                        <li class="tab-menu ">PHÒNG ĂN</li>
+                        <li class="tab-menu ">PHÒNG LÀM VIỆC</li>
+                        <li class="tab-menu ">NGOÀI TRỜI</li>
+                        <li class="tab-menu ">PHÒNG TRẺ EM</li>
+                    </ul>
+                </div>
+                <div class="allProduct tab-content" id="all"></div>
+                <div class="livingRoomProduct tab-content hide" id="lr"></div>
+                <div class="bedRoomProduct tab-content hide" id="br"></div>
+                <div class="kitchenProduct tab-content hide" id="kc"></div>
+                <div class="WorkingRoomProduct tab-content hide" id="wr"></div>
+                <div class="outDoorProduct tab-content hide" id="od"></div>
+                <div class="childrenRoom tab-content hide" id="cd"></div>
+            </div>
+            <!-- trang giỏ Hàng -->
+            <div class="cart-info">
+                <div class="nocart">
+                    <div class="img-nocart">
+                        <img src="./assets/img/noCart.png">
+                    </div>
+                </div>
+                <div class="list-cart">
+                    <div class="list-title">
+                        <span class="list-title-name">Tên sản phẩm</span>
+                        <div class="list-title-properti">
+                            <span class="list-title-quantity">Số lượng</span>
+                            <span class="list-title-subtotal">Đơn giá</span>
+                            <span class="list-title-total">Thành tiền</span>
+                            <span class="list-title-clear-cart">Xóa sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="list-cart-body">
+                    </div>
+                    <div class="total-money"></div>
+                </div>
+                <div class="btn-action">
+                    <button class="btn-back">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Quay lại trang chủ
+                    </button>
+                    <button class="btn-buy" onclick="handleOpenModal()">Đặt hàng</button>
+                </div>
+            </div>
+            <!-- Địa chỉ giao hàng. -->
+            <div class="modal-buy">
+                <div class="modal-buy-container">
+                    <div class="modal-buy-header">
+                        <p class="modal-buy-header-text">Thông tin người mua</p>
+                        <div class="modal-buy-header-icon" onclick="handleCloseModal()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="modal-buy-body">
+                        <label for="" class="modal-buy-lable">Họ và tên
+                            <span class="modal-buy-lable-require">*</span>
+                        </label>
+                        <input type="text" class="value-form modal-buy-input input-surname" placeholder="Họ"
+                            oninput="validateSurname()">
+                        <input type="text" class="value-form modal-buy-input input-name" placeholder="Tên"
+                            oninput="validateName()">
+                        <p class="surname-name">
+                            <span class="form-message message-surname"></span>
+                            <span class="form-message message-name"></span>
+                        </p>
+
+                        <label for="" class="modal-buy-lable">Email
+                            <span class="modal-buy-lable-require">*</span>
+                        </label>
+                        <input type="text" class="value-form modal-buy-input input-email" placeholder="Email"
+                            oninput="validateEmail()">
+                        <span class="form-message message-email"></span>
+
+                        <label for="" class="modal-buy-lable">Số điện thoại
+                            <span class="modal-buy-lable-require">*</span>
+                        </label>
+                        <input type="text" class="value-form modal-buy-input input-phone" placeholder="Số điện thoại"
+                            oninput="validatePhone()">
+                        <span class="form-message message-phone"></span>
+
+                        <label for="" class="modal-buy-lable">Địa chỉ
+                            <span class="modal-buy-lable-require">*</span>
+                        </label>
+                        <select class="value-form select-input" name="province" id="province"
+                            oninput="handleDistrictByID()" onchange="handleCloseTitle()">
+                            <option value='[0]' class="option-province-default">-- Chọn Tỉnh/Thành phố --</option>
+                        </select>
+                        <select class="value-form select-input" name="district" id="district" oninput="handleWardByID()"
+                            onfocus="handleNoProvince()">
+                            <option value='[0]' class="option-district-default">-- Chọn Huyện/Quận --</option>
+                        </select>
+                        <select class="value-form select-input" name="ward" id="ward" onfocus="handleNoDistrict()">
+                            <option value='[0]' class="option-ward-default">-- Chọn Phường/Xã --</option>
+                        </select>
+                        <input type="text" class="value-form modal-buy-input input-address" placeholder="Số nhà"
+                            oninput="validateAddress()">
+                        <span class="form-message message-address"></span>
+
+                        <label for="" class="modal-buy-lable">Lời nhắn</label>
+                        <input name="note" id="modal-buy-note" class="textarea-note" cols="30" rows="10"></input>
+                    </div>
+                    <div class="modal-buy-btn">
+                        <button class="btn-cancel" onclick="handleCloseModal()">Hủy</button>
+                        <button class="btn-confirm">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- phần footer trang web -->
+        <div class="footer">
+            <div class="foot">
+                <div class="info">
+                    <span class="material-symbols-outlined">mood</span>
+                    <div class="title">
+                        Khách hàng hài lòng
+                    </div>
+                    <div class="text">
+                        Với tôn chỉ phục vụ từ con tim, chúng tôi luôn nỗ lực cải thiện chất lượng sản phẩm, dịch vụ để
+                        mang đến trải nghiệm mua sắm tốt nhất cho Khách hàng.
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="material-symbols-outlined">storefront</span>
+                    <div class="title">
+                        SP Chính hãng
+                    </div>
+                    <div class="text">
+                        Chúng tôi cam kết các sản phẩm bán tại ĐnH.VN là hàng chính hãng, có nguồn gốc xuất xứ rõ ràng,
+                        tuân thủ mọi chính sách theo quy định.
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="material-symbols-outlined">lock</span>
+                    <div class="title">
+                        Mua sắm an toàn
+                    </div>
+                    <div class="text">
+                        Thông tin Khách hàng luôn được bảo vệ nghiêm ngặt thông qua chính sách bảo mật của chúng tôi.
+                        Chúng tôi cam kết không chia sẻ với bất kỳ bên thứ ba nào.
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="material-symbols-outlined">paid</span>
+                    <div class="title">
+                        Hàng hóa đa dạng
+                    </div>
+                    <div class="text">
+                        Quý khách có thể tìm thất bất cứ dòng sản phẩm nội, ngoại thất nào trên ĐnH.VN với phong cách đa
+                        dạng, tùy chọn kích thước, màu sắc và chất liệu theo nhu cầu.
+                    </div>
+                </div>
+            </div>
+            <div class="end">
+                <div class="content-footer">
+                    <div class="contact">
+                        <div class="title-footer">
+                            Liên hệ
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <span class="text-footer">123 Truong Dinh</span>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <span class="text-footer">0999999999 | 0987654321 (Hotline/Zalo)</span>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span class="material-symbols-outlined">alternate_email</span>
+                                </div>
+                                <span class="text-footer">hotro@ĐnH.vn</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="intro">
+                        <div class="title-footer">
+                            Giới thiệu
+                        </div>
+                        <p class="text-footer">ĐnH là công ty tiên phong trong lĩnh vực bán lẻ đồ nội thất theo yêu cầu.
+                            Các sản phẩm của ĐnH được thiết kế theo từng bộ sưu tập với chất liệu và phong cách đa dạng,
+                            giúp khách hàng dễ dàng tân trang cho cả ngôi nhà. Với lợi thế sản xuất trực tiếp, chúng tôi
+                            cam kết chất lượng và giá cả luôn tốt nhất đến tay người tiêu dùng.</p>
+                    </div>
+                    <!-- <div class="res-news">
+                        <div class="title-footer">
+                            Đăng ký nhận tin
+                        </div>
+                        <p class="text-footer">Cập nhật khuyến mãi, sản phẩm mới của ĐnH</p>
+                        <div class="inp">
+                            <input type="email" placeholder="Nhập email của bạn">
+                            <button type="submit">
+                                <i class="fa-solid fa-envelope"></i>
+                            </button>
+                        </div>
+                    </div> -->
+                    <div class="connect">
+                        <div class="title-footer">
+                            Kết nối với ĐnH
+                        </div>
+                        <p class="text-footer">Nơi chia sẻ những bài viết về nội thất</p>
+                        <span>
+                            <a href="https://www.facebook.com/">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://twitter.com/">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.youtube.com/">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.linkedin.com/">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.pinterest.com/">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="copyright">
+                    © 2023 | Công ty TNHH SX và TM ĐnH<br>
+                    GPDKKD: 0333333333 do Sở KH & ĐT TP.HCM cấp ngày 20/10/2050
+                </div>
+                <div class="bank-card">
+                    <img src="./assets/img/cash-on-delivery.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- thong bao -->
+    <div id="toast"></div>
+
+    <!-- info product -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-Container">
+            <div class="modal-close js-modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="ti-bag"></i>
+                Thông tin sản phẩm
+            </header>
+
+            <div class="modal-main">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/checkLogin.js"></script>
+    <script src="./js/slide.js"></script>
+    <script src="./js/showComponent.js"></script>
+    <script type="module" src="./js/firebase.js"></script>
+    <script src="./js/modal-buy.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

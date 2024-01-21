@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="register-container">
+            <div class="register">
+                <div class="form">
+                    <!-- form đăng nhập -->
+                    <form class="login-form">
+                        <h1>Đăng nhập</h1>
+                        <div class="modal-body">
+
+                            <label for="" class="modal-lable">Tài khoản <span
+                                    class="modal-lable-require">*</span></label>
+                            <input autocomplete="off" type="text" id="username" placeholder="Tài khoản">
+
+                            <label for="" class="modal-lable">Mật khẩu <span
+                                    class="modal-lable-require">*</span></label>
+                            <input autocomplete="off" type="password" id="password" placeholder="Mật khẩu">
+
+                            <p class="log" onclick="open_register()">Chưa có tài khoản? Đăng ký.</p>
+                        </div>
+                        <button class="btn" id="btn-login">Đăng nhập</button>
+                    </form>
+
+                    <!-- Form đăng ký -->
+                    <form class="register-form">
+                        <h1>Đăng ký tài khoản</h1>
+                        <div class="modal-body">
+                            <label for="" class="modal-lable">Họ và tên <span
+                                    class="modal-lable-require">*</span></label>
+                            <input autocomplete="off" type="text" class="input-fullname" placeholder="Tên">
+
+                            <label for="" class="modal-lable">Tài khoản <span
+                                    class="modal-lable-require">*</span></label>
+                            <input autocomplete="off" type="text" class="input-user" placeholder="Tài khoản">
+
+                            <label for="" class="modal-lable">Mật khẩu <span
+                                    class="modal-lable-require">*</span></label>
+                            <input autocomplete="off" type="password" class="input-password1" placeholder="Mật khẩu">
+
+                            <label for="" class="modal-lable">Xác nhận mật khẩu <span
+                                    class="modal-lable-require">*</span></label>
+                            <input autocomplete="off" type="password" class="input-password2"
+                                placeholder="Xác nhận mật khẩu">
+
+                            <p class="log" onclick="open_login()">Đã có tài khoản? Đăng nhập.</p>
+                        </div>
+                        <button class="btn" id="btn-register">Đăng ký</button>
+                    </form>
+                </div>
+
+                <div class="form-profile">
+                    <h1>Những lợi ích khi trở thành Thành viên</h1>
+                    <ul>
+                        <li>Đăng nhập bất cứ lúc nào để mua sắm</li>
+                        <li>Cá nhân hóa trải nghiệm mua sắm</li>
+                        <li>Rút ngắn thời gian mua hàng</li>
+                    </ul>
+                    <img src="./assets/img/register.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="login.js"></script>
+    <script>
+        function open_register() {
+            const login_form = document.querySelector('.login-form')
+            const register_form = document.querySelector('.register-form')
+
+            login_form.style.display = 'none'
+            register_form.style.display = 'block'
+        }
+
+        function open_login() {
+            const login_form = document.querySelector('.login-form')
+            const register_form = document.querySelector('.register-form')
+
+            login_form.style.display = 'block'
+            register_form.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

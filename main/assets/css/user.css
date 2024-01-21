@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    /* height: 700px; */
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .06);
+    padding: 60px 0;
+    border-bottom: 4px solid #EE4D2D;
+}
+
+.action {
+    width: 15%;
+    /* background-color: rgba(0,0,0,.06); */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-account {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-account span {
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.name {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.action1 {
+    font-size: 14px;
+    list-style: none;
+}
+
+.action1 li {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.action1 li span {
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.action1 li:hover {
+    color: tomato;
+}
+
+.main {
+    width: 70%;
+    background-color: #fff;
+    border-left: 1px solid #000;
+}
+
+.bill {
+    width:90%;
+    padding-left: 5%;
+    /* padding-right: 5%; */
+}
+
+.list-bill {
+    /* display: block; */
+}
+
+.foot {
+    margin-top: 0px;
+}
+
+.title1 {
+    margin: 30px;
+}
+
+.title1 h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.title1 p {
+    font-size: 16px;
+}
+
+.full {
+    margin-left: 80px;
+    margin-top: 40px;
+    display: flex;
+    font-size: 16px;
+    flex-direction: row;
+}
+
+.allInfo {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 100px;
+    border-right: 1px solid #000;
+}
+
+.allInfo div {
+    margin-bottom: 24px;
+}
+
+.information {
+    /* display: none; */
+}
+
+.img-user {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#setAvatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.img-user label {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .16);
+    color: rgba(0, 0, 0, .66);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.note {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .66);
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+}
+
+.in {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    /* height: 200px; */
+}
+
+.in * {
+    margin-bottom: 40px;
+}
+
+.in input {
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+.in label {
+    margin-bottom: 54px;
+}
+
+#change {
+    /* margin-left: 200px; */
+    /* margin-bottom: 100px; */
+    padding: 10px 40px;
+    background-color: coral;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form {
+    margin-top: 40px;
+    margin-left: 80px;
+    font-size: 14px;
+    margin-bottom: 80px;
+}
+
+
+.form input {
+    width: 400px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+
+#new-number {
+    margin-bottom: 30px;
+}
+
+
+#changeInfo {
+    padding: 10px 40px;
+    background-color: coral;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.list-bill {
+    padding: 20px 100px;
+}
+
+.list-bill-title {
+    display: flex;
+    font-size: 15px;
+}
+
+.list-bill-title,
+.list-bill-info {
+    /* align-items: center; */
+    justify-content: space-between;
+    font-weight: 550;
+    margin: 10px 0;
+}
+
+.list-bill-info {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.list-bill-info-list-0 {
+    border-top: 1px solid #CED0D4;
+}
+
+.borderTop {
+    border-top: 1px solid #CED0D4;
+}
+
+.list-bill-info-list {
+    display: flex;
+    border-bottom: 1px solid #CED0D4;
+    padding: 10px 0 5px;
+    justify-content: space-between;
+}
+
+.option2 .material-symbols-outlined {
+    color: tomato;
+    font-weight: 400;
+}
+
+.option1 .material-symbols-outlined {
+    color: rgb(20, 102, 160);
+    font-weight: 400;
+}
+
+.option3 .material-symbols-outlined {
+    color: rgb(16, 128, 51);
+    font-weight: 400;
+}
+
+.option4 .material-symbols-outlined {
+    color: rgb(183, 180, 23);
+    font-weight: 400;
+}

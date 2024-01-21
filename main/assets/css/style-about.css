@@ -1,0 +1,11 @@
+#about {
+    margin-top: 80px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about .text {
+    font-size: 14px;
+    line-height: 24px;
+}

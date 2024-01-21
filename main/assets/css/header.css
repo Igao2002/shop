@@ -1,0 +1,132 @@
+.header {
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo:hover {
+    opacity: 0.6;
+}
+
+.logo-shop {
+    height: 36px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar>li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar>li {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    transition: 0.2s ease-in;
+}
+
+#usernameDisplay {
+    list-style: none;
+    font-size: 16px;
+    padding: 0 20px;
+    position: relative;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    transition: 0.2s ease-in;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar>li>span:hover,
+.navbar>li>a:hover,
+.navbar>li>i:hover,
+#usernameDisplay:hover {
+    color: #e4a294;
+    cursor: pointer;
+}
+
+.header__cart-icon {
+    padding: 5px;
+}
+
+.header__cart-icon:hover {
+    color: #e4a294;
+
+}
+
+.header__cart-icon:hover .header__cart-notice {
+    background-color: #e4a294;
+
+}
+
+.navbar>li.active:nth-child(1):after,
+.navbar>li.active:nth-child(2):after,
+.navbar>li.active:nth-child(3):after {
+    content: "";
+    width: 60%;
+    height: 2px;
+    background-color: #EE4D2D;
+    position: absolute;
+    bottom: -4px;
+    left: 18px;
+    scale: 0.9;
+}
+
+.navbar>li.active:last-child {
+    /* color: #EE4D2D; */
+    color: rgb(214, 66, 66);
+}
+
+.navbar>li.active:last-child .header__cart-notice {
+    background-color: #d6492d;
+    /* color: #EE4D2D;
+    border: 2px solid ; */
+}
+
+.fas.fa-shopping-cart {
+    font-size: 18px;
+    /* padding: 5px; */
+}
+
+
+.fa-solid {
+    font-size: 18px;
+}
+
+.user-info {
+    display: none;
+}
+
+#avatarUser {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.user a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

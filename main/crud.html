@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="./assets/css/crud.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="app">
+    <ul class="menu">
+      <li class="tab active">Danh sách sản phẩm</li>
+      <li class="tab">Thêm sản phẩm</li>
+      <li class="tab">Danh sách đơn hàng</li>
+    </ul>
+    <div class="main">
+      <!-- phần danh sách sản phẩm -->
+      <div class="root tab-content">
+        <p>Danh sách sản phẩm</p>
+        <div class="root-title">
+          <h2>Tên sản phẩm</h2>
+          <h2>Giá</h2>
+          <h2>Chỉnh sửa</h2>
+        </div>
+      </div>
+      <!-- phần thêm sản phẩm -->
+      <div class="add tab-content hide">
+        <div id="title_container">
+          <h2> Thêm sản phẩm </h2>
+        </div>
+        <hr>
+        <div id="form_container">
+          <input autocomplete="off" placeholder="Tên sản phẩm" type="text" id="name" />
+          <input autocomplete="off" placeholder="Đặc điểm sản phẩm" type="text" id="describe" />
+          <input autocomplete="off" placeholder="Giá sản phẩm" type="number" id="price" />
+          <input autocomplete="off" placeholder="Số lượng sản phẩm" type="number" id="quantity" />
+          <input autocomplete="off" placeholder="Mô tả sản phẩm" type="text" id="info" />
+
+          <select id="type" name="type">
+            <option value="livingRoom">Phòng khách</option>
+            <option value="bedRoom">Phòng ngủ</option>
+            <option value="kitchen">Nhà bếp</option>
+            <option value="workingRoom">Phòng làm việc</option>
+            <option value="outDoor">Ngoài trời</option>
+            <option value="children">Phòng trẻ em</option>
+          </select>
+          <input autocomplete="off" type="file" id="imageInput" accept=".jpg, .png">
+        </div>
+
+        <div id="button_container">
+          <button id="submit" onclick="add()"> Xác nhận </button>
+        </div>
+      </div>
+      <!-- Phần danh sách đơn hàng -->
+      <div class="bill tab-content hide">
+        <div class="list-bill-list">
+          <div class="list-bill-title">
+            <span class="bill-title-code">Mã</span>
+            <span class="bill-title">Tên</span>
+            <span class="bill-title">Ngày mua</span>
+            <span class="bill-title">Số SP</span>
+            <span class="bill-title">Giá</span>
+          </div>
+          <div class="list-bill-info">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- info product -->
+  <div class="modal js-modal">
+    <div class="modal-container js-modal-Container">
+      <div class="modal-close js-modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+
+      <header class="modal-header">
+        <i class="ti-bag"></i>
+        Thông tin sản phẩm
+      </header>
+
+      <div class="modal-main">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- form nhập thông tin update sản phẩm -->
+  <div id="form-update">
+  </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<script src="./CRUD-js/crud.js"></script>
+
+</html>
